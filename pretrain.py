@@ -14,14 +14,14 @@ from data_reader import load_data, DataReader
 flags = tf.flags
 
 # data
-flags.DEFINE_string('data_dir',    'data/demo',   'data directory. Should contain train.txt/valid.txt/test.txt with input data')
+flags.DEFINE_string('data_dir',    'assets/neuralsum',   'data directory. Should contain train.txt/valid.txt/test.txt with input data')
 flags.DEFINE_string('train_dir',   'cv',     'training directory (models and summaries are saved there periodically)')
 flags.DEFINE_string('load_model',   None,    '(optional) filename of the model to load. Useful for re-starting training from a checkpoint')
 
 # model params
 flags.DEFINE_string ('model_choice',    'lstm',                         'model choice')
 flags.DEFINE_string ('embedding_path',  None,                           'pretrained emebdding path')
-flags.DEFINE_integer('rnn_size',        650,                            'size of LSTM internal state')
+flags.DEFINE_integer('rnn_size',        50,                            'size of LSTM internal state')
 flags.DEFINE_integer('highway_layers',  2,                              'number of highway layers')
 flags.DEFINE_integer('word_embed_size', 50,                             'dimensionality of word embeddings')
 flags.DEFINE_string ('kernels',         '[1,2,3,4,5,6,7]',              'CNN kernel widths')
